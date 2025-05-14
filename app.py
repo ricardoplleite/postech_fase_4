@@ -89,26 +89,46 @@ with aba[1]:
     st.title("POSTECH - Data Analytics - Fase 4")
 
     st.markdown("""
-### Problema:
+        ### 🛢️ Problema
 
-Imagine que você foi escalado como cientista de dados em uma grande empresa de petróleo e precisa criar um modelo preditivo para garantir qual será a previsão do preço do petróleo em dólar e instanciar esse modelo preditivo em uma aplicação para auxiliar na tomada de decisão. Utilize o Streamlit para realizar a interface visual da aplicação e não se esqueça de realizar o deploy do modelo nessa aplicação.  
-Base de dados a ser utilizada: [IPEADATA](http://www.ipeadata.gov.br/ExibeSerie.aspx?module=m&serid=1650971490&oper=view)
+        Você foi escalado como cientista de dados em uma grande empresa de petróleo e recebeu a missão de criar um **modelo preditivo** para estimar o **preço do petróleo em dólar**. Esse modelo será integrado a uma **aplicação interativa** desenvolvida com Streamlit, com o objetivo de auxiliar gestores na **tomada de decisões estratégicas** com base na variação do preço do petróleo.
 
-**A entrega deve conter:**
-- Link da aplicação do modelo preditivo no Streamlit
-- Notebook Python com toda a pipeline de construção do modelo
-- Desenvolvimento do objetivo
+        📌 **Base de dados principal**:  
+        [Preço do petróleo bruto Brent (IPEADATA)](http://www.ipeadata.gov.br/ExibeSerie.aspx?module=m&serid=1650971490&oper=view)
 
-### Proposta:
+        ---
 
-Para enriquecer a análise, foi necessário coletar dados complementares, pois utilizar apenas a base de valores do petróleo se mostrou insuficiente para o desenvolvimento eficiente do modelo de machine learning.
+        ### 📦 Entregáveis
 
-Para alcançar o objetivo proposto, será utilizada uma base de dados contendo informações sobre a produção de petróleo por país, incluindo a média diária de barris produzidos.
+        - ✅ Link da aplicação com o modelo preditivo em Streamlit  
+        - ✅ Notebook Python contendo toda a pipeline de construção do modelo  
+        - ✅ Descrição do objetivo e abordagem adotada
 
-Com esses dados, será possível cruzar a produção de cada país com o valor médio global do barril de petróleo. O modelo terá como objetivo prever a relação entre produção e preço, ou seja, identificar se uma queda na produção mundial está associada a um aumento no valor do barril — ou, inversamente, se um aumento na produção tende a reduzir seu preço.
+        ---
 
-### Bases de dados utilizadas:
+        ### 💡 Proposta
 
-- Produção mundial de petróleo: [EIA - U.S. Energy Information Administration](https://www.eia.gov)
-- Preço por barril do petróleo bruto Brent (FOB) (EIA366_PBRENT366): [IPEADATA](http://www.ipeadata.gov.br)
-""")
+        Durante o desenvolvimento, percebeu-se que utilizar **apenas a série histórica do preço do petróleo** não seria suficiente para gerar um modelo robusto. Para enriquecer a análise, foram incorporados **dados complementares**, especialmente sobre a **produção mundial de petróleo**.
+
+        Além disso, estudos apontam que fatores **climáticos** — como o inverno em países do hemisfério norte — influenciam diretamente o consumo de petróleo, o que pode provocar variações significativas no preço.
+
+        🔍 Com base nesses dados, o modelo buscará prever o valor médio do barril de petróleo considerando:
+
+        - Volume de produção mundial (média diária de barris)  
+        - Estação do ano (como proxy para variações de consumo)  
+        - Tendências históricas
+
+        O objetivo principal é **identificar relações entre oferta (produção) e preço**, por exemplo:
+
+        - Quedas na produção podem causar aumento no preço?  
+        - Aumento na produção leva a redução de valor?
+
+        ---
+
+        ### 🗃️ Bases de Dados Utilizadas
+
+        - 📈 **Produção Mundial de Petróleo**: [EIA - U.S. Energy Information Administration](https://www.eia.gov)
+        - 💰 **Preço por Barril (Brent - FOB)**: [IPEADATA - Código EIA366_PBRENT366](http://www.ipeadata.gov.br)
+
+        ---
+        """)
